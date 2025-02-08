@@ -12,6 +12,21 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 
-public class EquipmentService {
+@Service
+public class EquipmentService implements EquipmentRepository{
+
+    @Autowired
+    private EquipmentRepository equipmentRepository;
+
+
+    
+    public List<Equipment> getAllEquipment(){
+        return equipmentRepository.findAll();
+    }
+
+
+
+
+
     
 }

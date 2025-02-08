@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
-public interface OrderRepository  {
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
     // extend jpa repository and add method if needed
 }
